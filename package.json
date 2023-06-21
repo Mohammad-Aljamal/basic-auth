@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "watch": "nodemon app.js",
+    "start": "NODE_ENV=production node app.js",
+    "watch": "NODE_ENV=development nodemon app.js",
     "init:config": "sequelize init:config",
     "db:create": "sequelize db:create",
     "test-watch": "NODE_ENV=test jest --watchAll",
@@ -21,12 +21,14 @@
     "base-64": "^1.0.0",
     "bcrypt": "^5.0.0",
     "cors": "^2.8.5",
+    "cros": "^1.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jest": "^26.6.3",
     "pg": "^8.6.0",
     "sequelize": "^6.6.2",
     "sequelize-cli": "^6.2.0",
-    "sqlite3": "^5.0.2"
+    "sqlite3": "^5.0.2",
+    "supertest": "^6.3.3"
   }
 }
